@@ -90,6 +90,7 @@ const login = async (req, res) => {
       id: admin.id,
       email: admin.email,
       role: "admin",
+      is_creator: true,
     };
 
     const tokens = Jwt.generateTokens(payload);
@@ -151,6 +152,7 @@ const refresh = async (req, res) => {
       id: admin.id,
       email: admin.email,
       role: "admin",
+      is_creator: true,
     };
 
     const tokens = Jwt.generateTokens(payload);

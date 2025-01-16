@@ -97,6 +97,7 @@ const login = async (req, res) => {
     const payload = {
       id: customer.id,
       email: customer.email,
+      role: "customer",
     };
 
     const tokens = Jwt.generateTokens(payload);

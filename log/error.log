@@ -1,0 +1,73 @@
+2025-01-15T10:30:30.575Z error:ReferenceError: admin is not defined
+    at get (D:\Full Stack Darsi\Toys store\controllers\admin.controller.js:14:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-15T10:39:16.541Z error: ReferenceError: admin is not defined
+    at get (D:\Full Stack Darsi\Toys store\controllers\admin.controller.js:14:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-16T03:44:04.437Z error: Error: WHERE parameter "id" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1746:13)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1737:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1735:35)
+    at PostgresQueryGenerator.whereQuery (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1717:24)
+    at PostgresQueryGenerator.updateQuery (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:371:116)
+    at PostgresQueryInterface.bulkUpdate (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:361:37)
+    at admin.update (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2010:54)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async update (D:\Full Stack Darsi\Toys store\controllers\admin.controller.js:55:19)
+2025-01-16T03:48:34.005Z error: Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.select (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async admin.findAll (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1140:21)
+    at async admin.findOne (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1240:12)
+    at async refresh (D:\Full Stack Darsi\Toys store\controllers\admin.controller.js:153:19)
+2025-01-16T04:11:28.025Z error: Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async contract.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:20:22)
+2025-01-16T04:24:08.841Z error: Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async customer.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\customer.controller.js:28:22)
+2025-01-16T04:25:03.976Z error: Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.select (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async customer.findAll (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1140:21)
+    at async customer.findOne (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1240:12)
+    at async activate (D:\Full Stack Darsi\Toys store\controllers\customer.controller.js:185:22)
+2025-01-16T05:36:07.599Z error: Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async block_list.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\block_list.controller.js:20:23)
+2025-01-16T05:56:16.970Z error: Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async cart.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\cart.controller.js:20:18)
+2025-01-16T06:29:34.002Z error: Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async contract.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:20:22)

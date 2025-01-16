@@ -2,7 +2,7 @@ const { createLogger, format, transports } = require("winston");
 const { combine, timestamp, printf, errors } = format;
 
 const myFormat = printf(({ level, message, timestamp, stack }) => {
-  return `${timestamp} ${level}: ${stack}`;
+  return `${timestamp} ${level}:${message}\n${stack}`;
 });
 
 const logger = createLogger({

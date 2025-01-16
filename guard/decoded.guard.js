@@ -6,9 +6,7 @@ module.exports = async function (req, res, next) {
     const authorization = req.headers.authorization;
 
     if (!authorization) {
-      return res
-        .status(401)
-        .send({ message: "Siz ro'yxatdan o'tmagansiz" });
+      return res.status(401).send({ message: "Siz ro'yxatdan o'tmagansiz" });
     }
     const bearer = authorization.split(" ")[0];
     const token = authorization.split(" ")[1];

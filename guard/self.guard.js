@@ -3,7 +3,7 @@ module.exports = async function (req, res, next) {
     const id = req.params.id;
 
     if (req.decoded.id != id) {
-        return res.status(403).send({message: "Sizda bunday vakolat yo'q"})
+      return res.status(403).send({ message: "Sizda bunday vakolat yo'q" });
     }
     next();
   } catch (error) {

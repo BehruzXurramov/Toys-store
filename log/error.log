@@ -128,3 +128,70 @@ Error: WHERE parameter "cartId" has invalid "undefined" value
     at cart_item.findAll (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1140:47)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async add (D:\Full Stack Darsi\Toys store\controllers\review.controller.js:27:23)
+2025-01-17T09:03:28.910Z error:Validation error
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async customer.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\customer.controller.js:29:22)
+2025-01-17T09:11:26.225Z error:insert or update on table "cart" violates foreign key constraint "cart_customerId_fkey"
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async cart.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:48:5)
+2025-01-17T09:13:35.243Z error:insert or update on table "cart" violates foreign key constraint "cart_customerId_fkey"
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async cart.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:48:5)
+2025-01-17T09:15:38.773Z error:insert or update on table "cart" violates foreign key constraint "cart_customerId_fkey"
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async cart.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:48:5)
+2025-01-17T09:17:53.121Z error:insert or update on table "cart" violates foreign key constraint "cart_customerId_fkey"
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async cart.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:48:5)
+2025-01-17T09:19:54.918Z error:Cannot read properties of null (reading 'total_price')
+TypeError: Cannot read properties of null (reading 'total_price')
+    at add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:25:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-17T09:23:43.574Z error:insert or update on table "cart" violates foreign key constraint "cart_customerId_fkey"
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async cart.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:48:5)
+2025-01-17T09:28:24.780Z error:insert or update on table "cart" violates foreign key constraint "cart_customerId_fkey"
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async cart.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:50:5)

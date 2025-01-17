@@ -45,9 +45,14 @@ const add = async (req, res) => {
     });
     cart.is_active = false;
     await cart.save();
-    await Cart.create({ customerId: req.decoded.id });
+    console.log(req.decoded.id);
+    
+    await Cart.create({ customerId: cart.customerId });
+
     res.status(201).send(contract);
   } catch (error) {
+    console.log(error);
+    
     errorHandler(error, res);
   }
 };

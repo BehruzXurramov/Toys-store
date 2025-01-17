@@ -19,8 +19,8 @@ router.get("/", decodedGuard, adminGuard, get);
 router.get("/:id", decodedGuard, adminGuard, selfGuard, findById);
 router.post("/", decodedGuard, adminGuard, creatorGuard, add);
 router.post("/login", login);
-router.post("/logout", decodedGuard, adminGuard, logout);
-router.post("/refresh", decodedGuard, adminGuard, refresh);
+router.post("/logout", logout);
+router.post("/refresh", refresh);
 router.patch("/:id", decodedGuard, adminGuard, creatorGuard, update);
 router.delete("/:id", decodedGuard, adminGuard, creatorGuard, deleting);
 

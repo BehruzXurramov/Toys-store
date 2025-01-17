@@ -23,9 +23,10 @@ const Customer = sequelize.define(
     },
     email: {
       type: DataTypes.STRING(50),
+      unique: true,
     },
     password: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(250),
     },
     adress: {
       type: DataTypes.STRING(250),
@@ -35,12 +36,14 @@ const Customer = sequelize.define(
     },
     passport_number: {
       type: DataTypes.STRING(10),
+      unique: true,
     },
     refresh_token: {
       type: DataTypes.STRING(250),
     },
     is_active: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     activate_link: {
       type: DataTypes.STRING(250),
@@ -59,6 +62,6 @@ Customer.hasMany(Cart);
 Cart.belongsTo(Customer);
 
 Customer.hasMany(Review);
-Review.belongsTo(Customer)
+Review.belongsTo(Customer);
 
 module.exports = Customer;

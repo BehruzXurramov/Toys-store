@@ -11,8 +11,8 @@ const Contract = sequelize.define(
       autoIncrement: true,
     },
     status: {
-      type: DataTypes.ENUM(["birinchi", "ikkinchi", "uchinchi"]),
-      defaultValue: "birinchi"
+      type: DataTypes.ENUM(["process", "finished", "canceled"]),
+      defaultValue: "process"
     },
     remaining_balance: {
       type: DataTypes.DECIMAL(16, 2),

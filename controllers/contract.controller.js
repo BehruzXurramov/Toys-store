@@ -1,5 +1,7 @@
 const { errorHandler } = require("../helpers/error_handler");
+const Cart = require("../models/cart");
 const Contract = require("../models/contract");
+const PaymentPlan = require("../models/payment_plan");
 const { contractValidation } = require("../validations/contract");
 
 const get = async (req, res) => {
@@ -17,7 +19,33 @@ const add = async (req, res) => {
     if (error) {
       return res.status(400).send({ error: error.message });
     }
-    const contract = await Contract.create(value);
+    const plan = await PaymentPlan.findByPk(value.paymentPlanId);
+    const cart = await Cart.findByPk(value.cartId);
+
+    if (cart.total_price < value.first_payment) {
+      return res
+        .status(400)
+        .send({ message: "Siz ortiqcha to'lov qila olmaysiz" });
+    }
+    if (
+      (value.first_payment / cart.total_price) * 100 <
+      value.first_payment_rate
+    ) {
+      return res.status(400).send({ message: "Birinchi to'lov miqdori kam" });
+    }
+
+    const summa =
+      (cart.total_price - value.first_payment) * (1 + plan.interest_rate / 100);
+
+    const contract = await Contract.create({
+      ...value,
+      remaining_balance: summa,
+      monthly_payment: summa / plan.months,
+      adminId: req.decoded.id,
+    });
+    cart.is_active = false;
+    await cart.save();
+    await Cart.create({ customerId: req.decoded.id });
     res.status(201).send(contract);
   } catch (error) {
     errorHandler(error, res);

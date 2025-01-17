@@ -5,8 +5,6 @@ const Jwt = require("../service/jwt_service");
 const config = require("config");
 const to = require("../helpers/to_promise");
 const { adminValidation } = require("../validations/admin.validation");
-const uuid = require("uuid");
-const SendMail = require("../service/mail_service");
 
 const get = async (req, res) => {
   try {
@@ -88,9 +86,8 @@ const login = async (req, res) => {
 
     const payload = {
       id: admin.id,
-      email: admin.email,
       role: "admin",
-      is_creator: true,
+      is_creator: admin.is_creator,
     };
 
     const tokens = Jwt.generateTokens(payload);
@@ -150,9 +147,8 @@ const refresh = async (req, res) => {
     }
     const payload = {
       id: admin.id,
-      email: admin.email,
       role: "admin",
-      is_creator: true,
+      is_creator: admin.is_creator,
     };
 
     const tokens = Jwt.generateTokens(payload);

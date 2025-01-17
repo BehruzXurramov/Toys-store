@@ -10,7 +10,7 @@ const decodedGuard = require("../guard/decoded.guard");
 
 const router = require("express").Router();
 
-router.get("/", get);
+router.get("/", decodedGuard, customerGuard, get);
 router.get("/:id", decodedGuard, customerGuard, findById);
 router.post("/", decodedGuard, customerGuard, add);
 router.patch("/:id", decodedGuard, customerGuard, update);

@@ -1,4 +1,5 @@
 const { errorHandler } = require("../helpers/error_handler");
+const Contract = require("../models/contract");
 const Payment = require("../models/payment");
 const { paymentValidation } = require("../validations/payment");
 
@@ -17,6 +18,13 @@ const add = async (req, res) => {
     if (error) {
       return res.status(400).send({ error: error.message });
     }
+    const contract = await Contract.findByPk(value.contractId);
+    if (contract.remaining_balance < value.amount_paid) {
+      return res.status(400).send({ message: "Meyordan oshiqcha to'landi" });
+    }
+    contract.remaining_balance =
+      parseFloat(contract.remaining_balance) - parseFloat(value.amount_paid);
+    await contract.save();
     const payment = await Payment.create(value);
     res.status(201).send(payment);
   } catch (error) {

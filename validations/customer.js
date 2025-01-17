@@ -6,10 +6,10 @@ exports.customerValidation = (data) => {
     last_name: Joi.string().max(50).required(),
     phone: Joi.string().max(20).required(),
     email: Joi.string().email().required(),
-    password: Joi.string().required(),
+    password: Joi.string().min(4).max(20).required(),
     adress: Joi.string().max(250).required(),
     birthday: Joi.date().required(),
-    passport_number: Joi.string().max(10).required(),
+    passport_number: Joi.string().max(9).required(),
   });
 
   return customerValidate.validate(data, { abortEarly: false });

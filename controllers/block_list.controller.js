@@ -21,7 +21,10 @@ const add = async (req, res) => {
     if (error) {
       return res.status(400).send({ error: error.message });
     }
-    const blockList = await BlockList.create(value);
+    const blockList = await BlockList.create({
+      ...value,
+      adminId: req.decoded.id,
+    });
     res.status(201).send(blockList);
   } catch (error) {
     errorHandler(error, res);
@@ -35,10 +38,13 @@ const update = async (req, res) => {
     if (error) {
       return res.status(400).send({ error: error.message });
     }
-    const blockList = await BlockList.update(value, {
-      where: { id },
-      returning: true,
-    });
+    const blockList = await BlockList.update(
+      { ...value, adminId: req.decoded.id },
+      {
+        where: { id },
+        returning: true,
+      }
+    );
     res.send(blockList[1][0]);
   } catch (error) {
     errorHandler(error, res);
@@ -49,7 +55,7 @@ const deleting = async (req, res) => {
   try {
     const id = req.params.id;
     await BlockList.destroy({ where: { id } });
-    res.send({ message: "BlockList entry deleted." });
+    res.send({ message: "BlockList deleted." });
   } catch (error) {
     errorHandler(error, res);
   }

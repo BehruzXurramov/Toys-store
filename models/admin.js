@@ -1,6 +1,7 @@
 const sequelize = require("../config/db");
 const { DataTypes } = require("sequelize");
 const BlockList = require("./block_list");
+const Contract = require("./contract");
 
 const Admin = sequelize.define(
   "admin",
@@ -25,9 +26,11 @@ const Admin = sequelize.define(
     },
     is_creator: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     is_active: {
       type: DataTypes.BOOLEAN,
+      defaultValue: true,
     },
     refresh_token: {
       type: DataTypes.STRING(250),
@@ -41,5 +44,8 @@ const Admin = sequelize.define(
 
 Admin.hasMany(BlockList);
 BlockList.belongsTo(Admin);
+
+Admin.hasMany(Contract);
+Contract.belongsTo(Admin);
 
 module.exports = Admin;

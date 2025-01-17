@@ -71,3 +71,60 @@
     at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
     at async contract.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
     at async add (D:\Full Stack Darsi\Toys store\controllers\contract.controller.js:20:22)
+2025-01-17T06:02:19.066Z error:Validation error
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async customer.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\customer.controller.js:29:22)
+2025-01-17T06:11:35.599Z error:Validation error
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async customer.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\customer.controller.js:29:22)
+2025-01-17T06:13:43.492Z error:Validation error
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async customer.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\customer.controller.js:29:22)
+2025-01-17T06:15:38.168Z error:Validation error
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async customer.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\customer.controller.js:29:22)
+2025-01-17T06:16:37.912Z error:Validation error
+Error
+    at Query.run (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.insert (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:2490:35)
+    at async customer.create (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1362:12)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\customer.controller.js:29:22)
+2025-01-17T08:07:45.079Z error:WHERE parameter "cartId" has invalid "undefined" value
+Error: WHERE parameter "cartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1746:13)
+    at D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1737:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1735:35)
+    at PostgresQueryGenerator.getWhereConditions (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2078:19)
+    at PostgresQueryGenerator.selectQuery (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-generator.js:991:28)
+    at PostgresQueryInterface.select (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+    at cart_item.findAll (D:\Full Stack Darsi\Toys store\node_modules\sequelize\lib\model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async add (D:\Full Stack Darsi\Toys store\controllers\review.controller.js:27:23)

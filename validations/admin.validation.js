@@ -7,7 +7,7 @@ exports.adminValidation = (data) => {
     email: Joi.string().email(),
     password: Joi.string().min(4).max(20),
     is_creator: Joi.boolean().default(false),
-    is_active: Joi.boolean().default(false),
+    is_active: Joi.boolean().default(true),
   });
 
   return adminValidate.validate(data, { abortEarly: false });

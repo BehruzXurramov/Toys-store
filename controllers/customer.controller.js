@@ -7,6 +7,7 @@ const to = require("../helpers/to_promise");
 const { customerValidation } = require("../validations/customer");
 const SendMail = require("../service/mail_service");
 const uuid = require("uuid");
+const Cart = require("../models/cart");
 
 const get = async (req, res) => {
   try {
@@ -89,6 +90,9 @@ const login = async (req, res) => {
     if (!customer) {
       return res.status(400).send({ message: "Email yoki parol xato" });
     }
+    if (!customer.is_active) {
+      return res.status(400).send({ message: "Customer faollashtirilmagan" });
+    }
     const validPassword = bcrypt.compareSync(password, customer.password);
     if (!validPassword) {
       return res.status(400).send({ message: "Email yoki parol xato" });
@@ -96,7 +100,6 @@ const login = async (req, res) => {
 
     const payload = {
       id: customer.id,
-      email: customer.email,
       role: "customer",
     };
 
@@ -160,7 +163,6 @@ const refresh = async (req, res) => {
 
     const payload = {
       id: customer.id,
-      email: customer.email,
       role: "customer",
     };
 
@@ -192,12 +194,13 @@ const activate = async (req, res) => {
     if (customer.is_active) {
       return res.send({ message: "Customer avval faollashtirilgan" });
     }
-
+    const cart = await Cart.create({ total_price: 0, customerId: customer.id });
     customer.is_active = true;
     await customer.save();
     res.send({
       message: "Customer faollashtirildi",
       is_active: customer.is_active,
+      cart: cart.id,
     });
   } catch (error) {
     errorHandler(error, res);

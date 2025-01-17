@@ -9,9 +9,6 @@ const Image = sequelize.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    product_id: {
-      type: DataTypes.BIGINT,
-    },
     link: {
       type: DataTypes.STRING(250),
     },

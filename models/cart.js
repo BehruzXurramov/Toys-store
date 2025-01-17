@@ -13,6 +13,7 @@ const Cart = sequelize.define(
     },
     total_price: {
       type: DataTypes.DECIMAL(16, 2),
+      defaultValue: 0,
     },
     is_active: {
       type: DataTypes.BOOLEAN,
